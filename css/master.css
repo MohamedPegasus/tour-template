@@ -8,25 +8,30 @@
     --main-background:#043839;
     --main-transition: 0.5s ease-in-out;
 }   
+html{
+overflow-x: hidden;
+}
 .body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+    
 }
 .container {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: auto;
     background: var(--main-background);
 }
 
 /*star header*/
 @media screen and (max-width:750px) {
     .header{
-        
         z-index: 10;
         width: 100%;
-        margin: auto;
+        margin: 0px;
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -93,9 +98,8 @@
         list-style: none;
         position: absolute;
         margin-top: 15px;
-        margin-right: 10px;
         text-transform: capitalize;
-        padding: 0px 3px;
+        padding: 0px 0px;
         border-radius: 5px;
         background-color:#E2F0EF;
         right: 0px;
@@ -445,15 +449,16 @@ position: absolute;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5px;
+    margin-left: 1px;
 }
 
 .main-card .cards .card {
     position: relative;
-    width: 380px;
-    padding: 0px 10px;
+    margin-right: 5px;
+        margin-left: 5px;
+        padding: 0px 1px;
+        width: 400px;
     border-radius: 25px;
-    margin-left: 10px;
     height: 500px;
     align-items: center;
     transition: all 0.5 ease-in-out;
@@ -810,13 +815,16 @@ input[type="radio"] {
     flex-direction: column;
     background-color:#C46960 ;
     margin: 0;
+    width: 100%;
+
 }
 .contact .kform{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-transform: capitalize;
         margin: 50px 15px;
-        
-        width: 450px;
+        width: 580px;
         height: fit-content;
         color: rgba(6, 6, 36, 0.466);
         font-size: 30px;
@@ -825,6 +833,15 @@ input[type="radio"] {
         border-radius: 25px;
         box-shadow: 5px 5px 15px rgba(14, 8, 8, 0.493);
         background: rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width:550px){
+    .contact .kform{
+        width: 80%;
+    }
+    .contact .kform .kl .kli,.contact .kform .kl .klii{
+        margin-left: 0;
+        width: 70%;
+    }
 }
 
 .contact .kform .kl {
